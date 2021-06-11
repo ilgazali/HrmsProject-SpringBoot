@@ -18,6 +18,7 @@ import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
+import kodlamaio.hrms.entities.dtos.JobAdvertisementDto;
 
 
 @RestController
@@ -46,7 +47,7 @@ public class JobAdvertisementController {
 	}
 	
 	@GetMapping("/getAllActive")
-	public DataResult<List<JobAdvertisement>> getAllActive(){
+	public DataResult<List<JobAdvertisementDto>> getAllActive(){
 		
 		return this.jobAdvertisementService.getAllActive();
 	}

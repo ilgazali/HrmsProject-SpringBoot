@@ -12,6 +12,7 @@ import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.JobAdvertisementDao;
 import kodlamaio.hrms.entities.concretes.JobAdvertisement;
+import kodlamaio.hrms.entities.dtos.JobAdvertisementDto;
 
 @Service
 public class JobAdvertisementManager implements JobAdvertisementService {
@@ -70,9 +71,9 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getAllActive() {
+	public DataResult<List<JobAdvertisementDto>> getAllActive() {
 		
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getAllActive(),"Aktif iş ilanları sıralaması başarılı!");
+		return new SuccessDataResult<List<JobAdvertisementDto>>(this.jobAdvertisementDao.getAllActive(),"Aktif iş ilanları sıralaması başarılı!");
 	}
 
 
