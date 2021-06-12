@@ -13,23 +13,31 @@ import kodlamaio.hrms.entities.dtos.JobAdvertisementDto;
 public interface JobAdvertisementDao extends JpaRepository<JobAdvertisement, Integer> {
 
 	@Query("Select new kodlamaio.hrms.entities.dtos.JobAdvertisementDto"
-			+ "(jb.id,jb.releaseDate, e.companyName, j.position,j.description,"
-			+ "jb.positionAmount,jb.minSalary,jb.maxSalary,c.cityName, jb.applicationDeadline,jb.activationStatus)"
-			+ "From Job j Inner Join j.jobAdvertisements jb Inner Join Employer e Inner Join City c"
-			+ " where jb.activationStatus = true")//Aktif olan iş ilanlarını sıralar.
+			+ "(a.id, a.releaseDate, e.companyName, j.position, j.description, "
+			+ "a.positionAmount, a.minSalary, a.maxSalary, c.cityName,a.applicationDeadline, a.activationStatus) "
+			+ "From JobAdvertisement a Inner Join a.employer e Inner Join a.job j Inner Join a.city c "
+			+ "Where a.activationStatus = true")
 	List<JobAdvertisementDto> getAllActive();
 	
-	//@Query("From JobAdvertisement where activationStatus = true")//Aktif olan iş ilanlarını sıralar.
-	//List<JobAdvertisementDto> getAllActive();
 	
-	@Query("From JobAdvertisement where activationStatus = true ORDER BY applicationDeadline DESC") //Sadece aktif iş ilanlarını son başvuru tarihine göre sıralar.
-	List<JobAdvertisement> getAllActiveSorted();
-	
-	@Query("From JobAdvertisement where  employer.companyName = :companyName and activationStatus = true") //Seçilen bir şirkete ait tüm aktif ilanlar için.
-	List<JobAdvertisement> getAllActiveByCompanyName(@Param("companyName") String companyName);
+	@Query("Select new kodlamaio.hrms.entities.dtos.JobAdvertisementDto"
+			+ "(a.id, a.releaseDate, e.companyName, j.position, j.description, "
+			+ "a.positionAmount, a.minSalary, a.maxSalary, c.cityName,a.applicationDeadline, a.activationStatus) "
+			+ "From JobAdvertisement a Inner Join a.employer e Inner Join a.job j Inner Join a.city c "
+			+ "Where a.activationStatus = true  ORDER BY a.applicationDeadline DESC")
+	List<JobAdvertisementDto> getAllActiveSorted(); //Sadece aktif iş ilanlarını son başvuru tarihine göre sıralar.
+
+	@Query("Select new kodlamaio.hrms.entities.dtos.JobAdvertisementDto"
+			+ "(a.id, a.releaseDate, e.companyName, j.position, j.description, "
+			+ "a.positionAmount, a.minSalary, a.maxSalary, c.cityName,a.applicationDeadline, a.activationStatus) "
+			+ "From JobAdvertisement a Inner Join a.employer e Inner Join a.job j Inner Join a.city c "
+			+ "Where e.companyName = :companyName and a.activationStatus = true ")
+	List<JobAdvertisementDto> getAllActiveByCompanyName(@Param("companyName") String companyName); //Seçilen bir şirkete ait tüm aktif ilanlar için.
+			
+
 
 	@Modifying
-	@Query("update JobAdvertisement set activationStatus=false where id = :jobAdvertisementId")//İş ilanını kapanmak için
-	void closeTheAdvertisement(@Param("jobAdvertisementId") int jobAdvertisementId);
+	@Query("update JobAdvertisement set activationStatus=false where id = :jobAdvertisementId")
+	void closeTheAdvertisement(@Param("jobAdvertisementId") int jobAdvertisementId); //İş ilanını kapatmak için
 	
 }

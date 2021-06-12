@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -17,7 +18,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @EqualsAndHashCode(callSuper = false)
-@PrimaryKeyJoinColumn(name="user_id",referencedColumnName = "id")
+@PrimaryKeyJoinColumn(name="employer_id",referencedColumnName = "id")
 @Data
 @Entity
 @Table(name = "employers")
@@ -26,6 +27,10 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","job_advertisements"})
 public class Employer extends User{
 
+	
+	@Column(name = "employer_id",insertable = false ,updatable=false)
+	private int id;
+	
 	@Column(name = "company_name")
 	private String companyName;
 	

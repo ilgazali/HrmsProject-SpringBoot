@@ -28,7 +28,7 @@ import lombok.NoArgsConstructor;
 public class SocialMediaAccount {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "social_media_account_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	

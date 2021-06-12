@@ -2,6 +2,7 @@ package kodlamaio.hrms.entities.concretes;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
@@ -15,10 +16,13 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "system_personnel")
-@PrimaryKeyJoinColumn(name="user_id",referencedColumnName = "id")
+@PrimaryKeyJoinColumn(name="personnel_id",referencedColumnName = "id")
 @AllArgsConstructor
 @NoArgsConstructor
 public class SystemPersonnel extends User{
+	
+	@Column(name = "personnel_id",insertable = false ,updatable=false)
+	private int id;
 	
 	@Column(name = "name")
 	private String name;

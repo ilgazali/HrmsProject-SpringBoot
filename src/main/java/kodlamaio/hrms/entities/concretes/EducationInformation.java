@@ -30,12 +30,12 @@ import lombok.NoArgsConstructor;
 public class EducationInformation {
 	
 	@Id
-	@Column(name = "id")
+	@Column(name = "education_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	
-	@Column(name = "starting_name")
+	@Column(name = "starting_date")
 	private String startingDate;
 	
 	@Nullable

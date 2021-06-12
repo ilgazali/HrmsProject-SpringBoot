@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 public class UniversityDepartment {
 	
 	@Id
-	@Column(name = "id")
+	@Column(name = "department_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	

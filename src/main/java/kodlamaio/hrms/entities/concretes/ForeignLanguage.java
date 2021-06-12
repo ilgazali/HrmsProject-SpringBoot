@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 public class ForeignLanguage {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "foreign_language_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
@@ -34,7 +34,7 @@ public class ForeignLanguage {
 	private String languageName;
 	
 	@Column(name = "language_level")
-	private String languageLevel;
+	private int languageLevel;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "foreignLanguage")

@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 public class Image {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "image_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	

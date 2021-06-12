@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 public class CoverLetter {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "cover_letter_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	

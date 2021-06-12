@@ -14,9 +14,9 @@ public interface JobAdvertisementService {
 	
 	 DataResult<List<JobAdvertisementDto>> getAllActive();
 	 
-	 DataResult<List<JobAdvertisement>> getAllActiveSorted();
+	 DataResult<List<JobAdvertisementDto>> getAllActiveSorted();
 
-	 DataResult<List<JobAdvertisement>> getAllActiveByCompanyName(String companyName);
+	 DataResult<List<JobAdvertisementDto>> getAllActiveByCompanyName(String companyName);
 	 
 	 
 	 Result add(JobAdvertisement jobAdvertisement);

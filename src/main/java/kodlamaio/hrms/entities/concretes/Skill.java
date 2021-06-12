@@ -27,7 +27,7 @@ import lombok.NoArgsConstructor;
 public class Skill {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "skill_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	

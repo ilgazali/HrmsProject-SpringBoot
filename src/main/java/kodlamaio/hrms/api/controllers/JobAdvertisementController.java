@@ -53,13 +53,13 @@ public class JobAdvertisementController {
 	}
 	
 	@GetMapping("/getAllActiveSorted")
-	public DataResult<List<JobAdvertisement>> getByActivationStatus(){
+	public DataResult<List<JobAdvertisementDto>> getByActivationStatus(){
 		
       return this.jobAdvertisementService.getAllActiveSorted();
 	}
 	
 	@GetMapping("/getAllActiveByCompanyName")
-	public DataResult<List<JobAdvertisement>> getAllActiveByCompanyName(@RequestParam String companyName){
+	public DataResult<List<JobAdvertisementDto>> getAllActiveByCompanyName(@RequestParam String companyName){
 		
 		return this.jobAdvertisementService.getAllActiveByCompanyName(companyName);
 	}

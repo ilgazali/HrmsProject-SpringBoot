@@ -74,7 +74,7 @@ public class JobseekerManager implements JobseekerService {
 	
 	@Override
 	public DataResult<List<Jobseeker>> getAll() {
-	
+
 		return new SuccessDataResult<List<Jobseeker>>(this.jobseekerDao.findAll(),"Data başarılı bir şekilde listelendi.");
 	}
 	

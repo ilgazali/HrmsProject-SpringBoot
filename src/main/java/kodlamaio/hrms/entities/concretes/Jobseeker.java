@@ -3,6 +3,9 @@ package kodlamaio.hrms.entities.concretes;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
@@ -15,11 +18,14 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "jobseekers")
-@PrimaryKeyJoinColumn(name="user_id",referencedColumnName = "id")
+@PrimaryKeyJoinColumn(name="jobseeker_id",referencedColumnName = "id")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Jobseeker extends User {
 
+	
+	@Column(name = "jobseeker_id",insertable = false ,updatable=false)
+	private int jobseekerId;
 	
 	@Column(name = "name")
 	private String name;
@@ -33,7 +39,9 @@ public class Jobseeker extends User {
 	@Column(name = "year_of_birth")
     private int birthYear;
 	
-	
+	@ManyToOne
+	@JoinColumn(name = "cv_id")
+	private CV cv;
 	
 
     

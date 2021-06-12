@@ -52,19 +52,19 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getAllActiveSorted() {
+	public DataResult<List<JobAdvertisementDto>> getAllActiveSorted() {
 			
 
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getAllActiveSorted(),"Sıralama başarılı!");
+		return new SuccessDataResult<List<JobAdvertisementDto>>(this.jobAdvertisementDao.getAllActiveSorted(),"Sıralama başarılı!");
 	}
 
 
 
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getAllActiveByCompanyName(String companyName) {
+	public DataResult<List<JobAdvertisementDto>> getAllActiveByCompanyName(String companyName) {
 		
-		return new SuccessDataResult<List<JobAdvertisement>>(jobAdvertisementDao.getAllActiveByCompanyName(companyName),"Şirket adına göre sıralama başarılı!");
+		return new SuccessDataResult<List<JobAdvertisementDto>>(jobAdvertisementDao.getAllActiveByCompanyName(companyName),"Şirket adına göre sıralama başarılı!");
 	}
 
 
