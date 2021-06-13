@@ -1,13 +1,18 @@
 package kodlamaio.hrms.entities.concretes;
 
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,11 +26,12 @@ import lombok.NoArgsConstructor;
 @PrimaryKeyJoinColumn(name="jobseeker_id",referencedColumnName = "id")
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
 public class Jobseeker extends User {
 
 	
-	@Column(name = "jobseeker_id",insertable = false ,updatable=false)
-	private int jobseekerId;
+	//@Column(name = "jobseeker_id",insertable = false ,updatable=false)
+	//private int jobseekerId;
 	
 	@Column(name = "name")
 	private String name;
@@ -39,9 +45,14 @@ public class Jobseeker extends User {
 	@Column(name = "year_of_birth")
     private int birthYear;
 	
-	@ManyToOne
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "jobseeker")
+	private List<CV> cvs;
+	
+	/*@ManyToOne
 	@JoinColumn(name = "cv_id")
-	private CV cv;
+	private CV cv;*/
 	
 
     

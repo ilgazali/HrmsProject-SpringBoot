@@ -28,6 +28,10 @@ public class EducationInformationManager implements EducationInformationService{
 	@Override
 	public Result add(EducationInformation educationInformation) {
 		
+		if (educationInformation.getGraduationDate().trim().isEmpty()) {
+			educationInformation.setGraduationDate("Devam ediyor.");
+		}
+		
 		this.educationInformationDao.save(educationInformation);
 		
 		return new SuccessResult("Ekleme başarılı");

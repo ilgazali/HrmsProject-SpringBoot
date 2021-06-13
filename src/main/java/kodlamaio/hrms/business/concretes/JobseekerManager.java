@@ -30,7 +30,7 @@ public class JobseekerManager implements JobseekerService {
 	private EmailCheckService emailCheckService;
 	private EmailVerificationService emailVerificationService;
 	
-	
+	@Autowired
 	public JobseekerManager(JobseekerDao jobseekerDao, JobseekerCheckService jobseekerCheckService,
 			JobseekerValidityService jobseekerValidityService, EmailCheckService emailCheckService,
 			EmailVerificationService emailVerificationService) {

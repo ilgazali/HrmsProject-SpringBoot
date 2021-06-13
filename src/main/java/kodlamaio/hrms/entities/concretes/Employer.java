@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -28,8 +27,8 @@ import lombok.NoArgsConstructor;
 public class Employer extends User{
 
 	
-	@Column(name = "employer_id",insertable = false ,updatable=false)
-	private int id;
+	//@Column(name = "employer_id",insertable = false ,updatable=false)
+	//private int id;
 	
 	@Column(name = "company_name")
 	private String companyName;

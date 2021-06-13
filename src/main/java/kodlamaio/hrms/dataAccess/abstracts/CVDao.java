@@ -16,5 +16,5 @@ public interface CVDao extends JpaRepository<CV, Integer>{
 	//@Query(value = "From CV  Where CV.jobseeker.jobseekerId =:jobseekerId", nativeQuery = true)
 	//List<CV> getCVByJobseekerId(@Param("jobseekerId") int jobseekerId);
 	
-	List<CV> getByJobseeker_JobseekerId(int jobseekerId);
+	List<CV> getByJobseeker_Id(int jobseekerId);
 }

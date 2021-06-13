@@ -14,6 +14,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv_skills"})
 public class Skill {
 
 	@Id
@@ -36,5 +37,5 @@ public class Skill {
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "skill")
-    private List<CV> cvs;
+    private List<CVSkill> cvSkills;
 }

@@ -23,8 +23,11 @@ public class JobExperienceManager implements JobExperienceService{
 	@Override
 	public Result add(JobExperience jobExperience) {
 		
-		this.jobExperienceDao.save(jobExperience);
+		if (jobExperience.getEndDateOfWork().trim().isEmpty()){
+			jobExperience.setEndDateOfWork("Devam ediyor.");
+		}
 		
+		this.jobExperienceDao.save(jobExperience);
 		return new SuccessResult("Ekleme başarılı");
 	}
 	

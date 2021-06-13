@@ -1,5 +1,6 @@
 package kodlamaio.hrms.business.concretes;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.dataAccess.abstracts.CVDao;
 import kodlamaio.hrms.entities.concretes.CV;
-import net.bytebuddy.asm.Advice.This;
+
 
 @Service
 public class CVManager implements CVService{
@@ -33,10 +34,6 @@ public class CVManager implements CVService{
 		
 		this.cvDao.save(cv);
 		
-		if(cv.getEducationInformation().getGraduationDate().equals(null)) {
-			cv.getEducationInformation().setGraduationDate("Devam ediyor");
-		}
-		
 		return new SuccessResult("Ekleme başarılı");
 	
 	}
@@ -46,7 +43,7 @@ public class CVManager implements CVService{
 	@Override
 	public DataResult<List<CV>> getCVByJobseekerId(int jobseekerId) {
 
-		return new SuccessDataResult<List<CV>>(this.cvDao.getByJobseeker_JobseekerId(jobseekerId));
+		return new SuccessDataResult<List<CV>>(this.cvDao.getByJobseeker_Id(jobseekerId));
 	}
 
 }
