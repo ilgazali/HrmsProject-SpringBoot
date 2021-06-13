@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 public class Image {
 
 	@Id
@@ -34,13 +34,9 @@ public class Image {
 	private String imageUrl;
 
 	
-	@JsonIgnore
+
 	@ManyToOne()
 	@JoinColumn(name = "cv_id")
 	private CV cv;
-	
-	/*@JsonIgnore
-	@OneToMany(mappedBy = "image")
-    private List<CV> cvs;*/
 	
 }

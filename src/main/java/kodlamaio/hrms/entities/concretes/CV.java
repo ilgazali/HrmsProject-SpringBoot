@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
@@ -23,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "educations"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class CV {
 
 	@Id
@@ -31,71 +32,50 @@ public class CV {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	
+	//@JsonIgnore
 	@OneToMany(mappedBy = "cv")
     private List<EducationInformation> educationInformations;
 	
-	/*@ManyToOne
-	@JoinColumn(name = "education_id")
-	private List<EducationInformation> educationInformation;*/
 	
-
+	//@JsonIgnore
 	@OneToMany(mappedBy = "cv")
 	private List<JobExperience> jobExperiences;
 	
-	/*@ManyToOne
-	@JoinColumn(name = "job_experience_id")
-	private List<JobExperience> jobExperience;*/
 	
-	
-
+	//@JsonIgnore
 	@OneToMany(mappedBy = "cv")
 	private List<ForeignLanguage> foreignLanguages;
 	
-	/*@ManyToOne
-	@JoinColumn(name = "foreign_language_id")
-	private List<ForeignLanguage> foreignLanguage;*/
 	
-	
+	//@JsonIgnore
 	@OneToMany(mappedBy = "cv")
 	private List<Image> image;
-	
-	/*@ManyToOne
-	@JoinColumn(name = "image_id")
-	private Image image;*/
 
-	
+
+	//@JsonIgnore
 	@OneToMany(mappedBy = "cv")
 	private List<SocialMediaAccount> socialMediaAccount;
 	
-	/*@ManyToOne
-	@JoinColumn(name = "social_media_account_id")
-	private List<SocialMediaAccount> socialMediaAccount;*/
+
 	
 	
+	//@JsonIgnore
 	@OneToMany(mappedBy = "cv")
 	private List<CVSkill> cvSkills;
 	
-	/*@ManyToOne
-	@JoinColumn(name = "skill_id")
-	private List<Skill> skill;*/
+
 	
-	
+	//@JsonIgnore
 	@OneToMany(mappedBy = "cv")
 	private List<CoverLetter> coverLetters;
 	
-	/*@ManyToOne
-	@JoinColumn(name = "cover_letter_id")
-	private CoverLetter coverLetter;*/
 
 	
 	@ManyToOne
 	@JoinColumn(name="jobseeker_id")
 	private Jobseeker jobseeker;
 	
-	/*@JsonIgnore
-	@OneToMany(mappedBy = "cv")
-    private List<Jobseeker> jobseeker;*/
+
 	
 	
 	

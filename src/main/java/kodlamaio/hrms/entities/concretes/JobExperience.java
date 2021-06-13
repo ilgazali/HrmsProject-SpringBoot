@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 public class JobExperience {
 
 	@Id
@@ -45,12 +45,10 @@ public class JobExperience {
 	@Column(name = "end_date_of_work")
 	private String endDateOfWork;
 	
-	@JsonIgnore
+	
 	@ManyToOne()
 	@JoinColumn(name = "cv_id")
 	private CV cv;
 	
-	/*@JsonIgnore
-	@OneToMany(mappedBy = "jobExperience")
-    private List<CV> cvs;*/
+
 }

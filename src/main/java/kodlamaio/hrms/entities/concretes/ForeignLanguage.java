@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 public class ForeignLanguage {
 
 	@Id
@@ -36,12 +36,8 @@ public class ForeignLanguage {
 	@Column(name = "language_level")
 	private int languageLevel;
 	
-	/* @JsonIgnore
-	@OneToMany(mappedBy = "foreignLanguage")
-	private List<CV> cvs; */
-	
+
 	@ManyToOne()
-	@JsonIgnore
 	@JoinColumn(name = "cv_id")
 	private CV cv;
 	

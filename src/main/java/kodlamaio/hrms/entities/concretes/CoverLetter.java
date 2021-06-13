@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 public class CoverLetter {
 
 	@Id
@@ -34,12 +34,8 @@ public class CoverLetter {
 	private String coverLetter;
 	
 	
-	@JsonIgnore
 	@ManyToOne()
 	@JoinColumn(name = "cv_id")
 	private CV cv;
 	
-	/*@JsonIgnore
-	@OneToMany(mappedBy = "coverLetter")
-    private List<CV> cvs;*/
 }

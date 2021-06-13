@@ -26,12 +26,10 @@ import lombok.NoArgsConstructor;
 @PrimaryKeyJoinColumn(name="jobseeker_id",referencedColumnName = "id")
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 public class Jobseeker extends User {
 
 	
-	//@Column(name = "jobseeker_id",insertable = false ,updatable=false)
-	//private int jobseekerId;
 	
 	@Column(name = "name")
 	private String name;
@@ -50,9 +48,6 @@ public class Jobseeker extends User {
 	@OneToMany(mappedBy = "jobseeker")
 	private List<CV> cvs;
 	
-	/*@ManyToOne
-	@JoinColumn(name = "cv_id")
-	private CV cv;*/
 	
 
     

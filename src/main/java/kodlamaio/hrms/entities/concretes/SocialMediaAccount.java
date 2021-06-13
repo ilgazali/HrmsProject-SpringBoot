@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 public class SocialMediaAccount {
 
 	@Id
@@ -40,13 +40,10 @@ public class SocialMediaAccount {
 	private String socialMediaLink;
 	
 	
-	@JsonIgnore
 	@ManyToOne()
 	@JoinColumn(name = "cv_id")
 	private CV cv;
 	
-	/*@JsonIgnore
-	@OneToMany(mappedBy = "socialMediaAccount")
-    private List<CV> cvs;*/
+	
 	
 }

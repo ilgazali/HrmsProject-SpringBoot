@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cvs"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 public class EducationInformation {
 	
 	@Id
@@ -49,7 +49,7 @@ public class EducationInformation {
 	@JoinColumn(name = "department_id")
 	private UniversityDepartment universityDepartment;
 	
-	@JsonIgnore
+	
 	@ManyToOne()
 	@JoinColumn(name = "cv_id")
 	private CV cv;
