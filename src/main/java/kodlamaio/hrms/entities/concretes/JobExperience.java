@@ -14,6 +14,8 @@ import org.springframework.lang.Nullable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
+//@JsonIgnoreProperties({"hibernateLazyInitializer","handler","cv"})
 public class JobExperience {
 
 	@Id
@@ -45,7 +47,7 @@ public class JobExperience {
 	@Column(name = "end_date_of_work")
 	private String endDateOfWork;
 	
-	
+	@JsonProperty(access = Access.WRITE_ONLY)
 	@ManyToOne()
 	@JoinColumn(name = "cv_id")
 	private CV cv;
