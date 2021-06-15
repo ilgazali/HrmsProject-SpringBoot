@@ -33,7 +33,7 @@ public class EducationInformationManager implements EducationInformationService{
 	@Override
 	public Result add(EducationInformation educationInformation) {
 		
-		if (educationInformation.getGraduationDate().trim().isEmpty()) {
+		if (educationInformation.getGraduationDate().trim().isBlank()) {
 			educationInformation.setGraduationDate("Devam ediyor.");
 		}
 		
@@ -48,7 +48,7 @@ public class EducationInformationManager implements EducationInformationService{
 	@Override
 	public DataResult<List<EducationInformationDto>> getEducationInformationsByUserId(int jobseekerId) {
 
-		return new SuccessDataResult<List<EducationInformationDto>>(educationInformationDao.getEducationInformationsByUserId(jobseekerId));
+		return new SuccessDataResult<List<EducationInformationDto>>(educationInformationDao.getEducationInformations(jobseekerId));
 	}
 
 }

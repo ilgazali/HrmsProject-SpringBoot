@@ -1,6 +1,8 @@
 package kodlamaio.hrms.entities.concretes;
 
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -41,7 +43,7 @@ public class JobExperience {
 	private String jobPosition;
 	
 	@Column(name = "start_date_of_work")
-	private String startDateOfWork;
+	private Date startDateOfWork;
 	
 	@Nullable
 	@Column(name = "end_date_of_work")

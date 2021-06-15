@@ -1,6 +1,8 @@
 package kodlamaio.hrms.entities.concretes;
 
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,7 +38,7 @@ public class EducationInformation {
 	
 	
 	@Column(name = "starting_date")
-	private String startingDate;
+	private Date startingDate;
 	
 	@Nullable
 	@Column(name = "graduation_date")

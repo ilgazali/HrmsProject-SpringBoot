@@ -2,6 +2,8 @@ package kodlamaio.hrms.entities.dtos;
 
 
 
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +21,7 @@ public class EducationInformationDto {
 	
 	private String universityDepartmentString;
 	
-	private String startingDateString;
+	private Date startingDateString;
 	
 	private String graduationDateString;
 	
