@@ -58,6 +58,7 @@
 ### :milky_way: Adaylar sisteme ön yazı ekleyebilmelidir. (Örneğin: Çalışmayı çok severim....)
 # :star2: Req 13 : Bir adaya ait tüm CV bilgisi görüntülenebilmelidir.
 ## Veri tabanı olarak PostgreSQL kullanılmıştır. Projenin güncel veri tabanı modeli aşağıdaki gibidir:
-![Untitled](https://user-images.githubusercontent.com/73468385/122256615-e928fc80-ced7-11eb-9e39-fb91ea455a33.png)
+![database](https://user-images.githubusercontent.com/73468385/122257979-36f23480-ced9-11eb-9a2f-872f47420805.png)
+
 
 
