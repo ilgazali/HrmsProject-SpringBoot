@@ -56,7 +56,7 @@
 ### :milky_way: Adaylar bildikleri programlama dillerini veya teknolojilerini sisteme girebilmelidir. (Programlama/Teknoloji adı) Örneğin; React
 ### :milky_way: Adaylar sisteme ön yazı ekleyebilmelidir. (Örneğin: Çalışmayı çok severim....)
 # :star2: ***Req 13 : Bir adaya ait tüm CV bilgisi görüntülenebilmelidir.***
-## **Veri tabanı olarak PostgreSQL kullanılmıştır. Projenin güncel veri tabanı modeli aşağıdaki gibidir:**
+## **Veri tabanı olarak PostgreSQL kullanılmıştır. Projenin güncel veri tabanı modeli şöyledir:**
 ![Untitled (2)](https://user-images.githubusercontent.com/73468385/122258454-b8e25d80-ced9-11eb-85f8-5c7d0f85d9b2.png)
 
 
