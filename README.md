@@ -19,7 +19,6 @@
 # :star2: Req 3 : Sisteme genel iş pozisyonu isimleri eklenebilmelidir. (Örneğin Software Developer, Software Architect.)
 ## Kabul Kriterleri:
 ### :milky_way: Bu pozisyonlar tekrar edemez. Kullanıcı uyarılır.
-##--------- Sistem'e Swagger desteği getirildi
 # :star2: Req 4 : İş verenler listelenebilmelidir. (Sadece tüm liste)
 # :star2: Req 5 : İş arayanlar listelenebilmelidir. (Sadece tüm liste)
 # :star2: Req 6 : İş pozisyonları listelenebilmelidir. (Sadece tüm liste)
