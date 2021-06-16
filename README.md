@@ -2,7 +2,7 @@
 ![hrms-human-resource-management-system](https://user-images.githubusercontent.com/73468385/122237775-44eb8980-cec8-11eb-85d1-20f05f6dc14b.jpg)
 # BACKEND İSTERLERİ  
 ## Sistemimiz üç temel kullanıcı türüne sahiptir. Sistem personeli, İş Arayanlar ve İş verenler.
-# :star2: *Req 1 : İş Arayanlar sisteme kayıt olabilmelidir.*
+# :star2: ***Req 1 : İş Arayanlar sisteme kayıt olabilmelidir.***
 ## Kabul Kriterleri:
 ### :milky_way: Kayıt sırasında kullanıcıdan ad, soyad, tcno, doğum yılı, e-Posta, şifre, şifre tekrarı bilgileri istenir.
 ### :milky_way: Tüm alanlar zorunludur. Kullanıcı bilgilendirilir.
@@ -10,7 +10,7 @@
 ### :milky_way: Doğrulama geçerli değilse kullanıcı bilgilendirilir.
 ### :milky_way: Daha önce kayıtlı bir e-posta veya tcno var ise kayıt gerçekleşmez. Kullanıcı bilgilendirilir.
 ### :milky_way: Kayıdın gerçekleşmesi için e-posta doğrulaması gerekir.
-# :star2: *Req 2 : İş verenler sisteme kayıt olabilmelidir.*
+# :star2: ***Req 2 : İş verenler sisteme kayıt olabilmelidir.***
 ## Kabul Kriterleri:
 ### :milky_way: Kayıt sırasında kullanıcıdan şirket adı, web sitesi, web sitesi ile aynı domaine sahip e-posta, telefon, şifre, şifre tekrarı bilgileri istenir. Burada amaç sisteme şirket olmayanların katılmasını engellemektir.
 ### :milky_way: Tüm alanlar zorunludur. Kullanıcı bilgilendirilir.
