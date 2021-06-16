@@ -17,7 +17,6 @@
 ### :milky_way: Şirket kayıtları iki şekilde doğrulanır. Kayıdın gerçekleşmesi için e-posta doğrulaması gerekir. HRMS personelinin (bizim :)) onayı gerekmektedir.
 ### :milky_way: Daha önce kayıtlı bir e-posta var ise kayıt gerçekleşmez. Kullanıcı bilgilendirilir.
 # :star2: ***Req 3 : Sisteme genel iş pozisyonu isimleri eklenebilmelidir. (Örneğin Software Developer, Software Architect.)***
-## Kabul Kriterleri:
 ### :milky_way: Bu pozisyonlar tekrar edemez. Kullanıcı uyarılır.
 # :star2: ***Req 4 : İş verenler listelenebilmelidir. (Sadece tüm liste)***
 # :star2: ***Req 5 : İş arayanlar listelenebilmelidir. (Sadece tüm liste)***
