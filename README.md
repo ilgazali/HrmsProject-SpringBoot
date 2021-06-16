@@ -1,3 +1,4 @@
 # Human Resource Management System Project 
-# :star: req 1
-# req 1
+## BACKEND İSTERLERİ  
+### Sistemimiz üç temel kullanıcı türüne sahiptir. Sistem personeli, İş Arayanlar ve İş verenler.
+
