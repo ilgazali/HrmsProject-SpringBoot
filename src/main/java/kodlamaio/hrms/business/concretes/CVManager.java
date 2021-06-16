@@ -43,7 +43,7 @@ public class CVManager implements CVService{
 	@Override
 	public DataResult<List<CV>> getCVByJobseekerId(int jobseekerId) {
 
-		return new SuccessDataResult<List<CV>>(this.cvDao.getByJobseeker_Id(jobseekerId));
+		return new SuccessDataResult<List<CV>>(this.cvDao.getByJobseeker_Id(jobseekerId),"Veri başarılı bir şekilde getirildi.");
 	}
 
 }
