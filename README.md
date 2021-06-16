@@ -1,7 +1,7 @@
 # Human Resource Management System Project 
 ![hrms-human-resource-management-system](https://user-images.githubusercontent.com/73468385/122237775-44eb8980-cec8-11eb-85d1-20f05f6dc14b.jpg)
-## BACKEND İSTERLERİ  
-### Sistemimiz üç temel kullanıcı türüne sahiptir. Sistem personeli, İş Arayanlar ve İş verenler.
+# BACKEND İSTERLERİ  
+## Sistemimiz üç temel kullanıcı türüne sahiptir. Sistem personeli, İş Arayanlar ve İş verenler.
 # :star2: Req 1 : İş Arayanlar sisteme kayıt olabilmelidir.
 ## Kabul Kriterleri:
 ### :milky_way: Kayıt sırasında kullanıcıdan ad, soyad, tcno, doğum yılı, e-Posta, şifre, şifre tekrarı bilgileri istenir.
@@ -57,4 +57,7 @@
 ### :milky_way: Adaylar bildikleri programlama dillerini veya teknolojilerini sisteme girebilmelidir. (Programlama/Teknoloji adı) Örneğin; React
 ### :milky_way: Adaylar sisteme ön yazı ekleyebilmelidir. (Örneğin: Çalışmayı çok severim....)
 # :star2: Req 13 : Bir adaya ait tüm CV bilgisi görüntülenebilmelidir.
+## Veri tabanı olarak PostgreSQL kullanılmıştır. Projenin güncel veri tabanı modeli aşağıdaki gibidir:
+![Untitled](https://user-images.githubusercontent.com/73468385/122256615-e928fc80-ced7-11eb-9e39-fb91ea455a33.png)
+
 
