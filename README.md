@@ -49,7 +49,7 @@
 ### :milky_way: Eğer hala çalışıyorsa işten ayrılma yılı boş geçilebilmelidir.
 ### :milky_way: Adayların tecrübeleri yıla göre tersten sıralanabilmelidir. Hala çalışıyorsa yine bu tecrübesi en üstte ve "devam ediyor" olarak görüntülenmelidir.
 ### :milky_way: Adaylar bildikleri yabancı dilleri sisteme girebilmelidir. ( Dil, Seviye -> 1-5)
-### :milky_way: Adaylar sisteme fotoğraf girebilmelidir. Adaya ait fotoğraf https://cloudinary.com/pricing sisteminde tutulacaktır.
+### :milky_way: Adaylar sisteme fotoğraf girebilmelidir. Adaya ait fotoğraf [cloudinary](https://cloudinary.com/pricing) sisteminde tutulacaktır.
 ### :milky_way: Adaylar sisteme github adreslerini girebilmelidir.
 ### :milky_way: Adaylar sisteme linkedin adreslerini girebilmelidir.
 ### :milky_way: Adaylar bildikleri programlama dillerini veya teknolojilerini sisteme girebilmelidir. (Programlama/Teknoloji adı) Örneğin; React
