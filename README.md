@@ -1,61 +1,61 @@
 # Human Resource Management System Project 
 ![hrms-human-resource-management-system](https://user-images.githubusercontent.com/73468385/122237775-44eb8980-cec8-11eb-85d1-20f05f6dc14b.jpg)
-# BACKEND İSTERLERİ  
-## Sistemimiz üç temel kullanıcı türüne sahiptir. Sistem personeli, İş Arayanlar ve İş verenler.
-# :star2: ***Req 1 : İş Arayanlar sisteme kayıt olabilmelidir.***
-## Kabul Kriterleri:
-### :milky_way: Kayıt sırasında kullanıcıdan ad, soyad, tcno, doğum yılı, e-Posta, şifre, şifre tekrarı bilgileri istenir.
-### :milky_way: Tüm alanlar zorunludur. Kullanıcı bilgilendirilir.
-### :milky_way: Mernis doğrulaması yapılarak sisteme kayıt gerçekleştirilir.
-### :milky_way: Doğrulama geçerli değilse kullanıcı bilgilendirilir.
-### :milky_way: Daha önce kayıtlı bir e-posta veya tcno var ise kayıt gerçekleşmez. Kullanıcı bilgilendirilir.
-### :milky_way: Kayıdın gerçekleşmesi için e-posta doğrulaması gerekir.
-# :star2: ***Req 2 : İş verenler sisteme kayıt olabilmelidir.***
-## Kabul Kriterleri:
-### :milky_way: Kayıt sırasında kullanıcıdan şirket adı, web sitesi, web sitesi ile aynı domaine sahip e-posta, telefon, şifre, şifre tekrarı bilgileri istenir. Burada amaç sisteme şirket olmayanların katılmasını engellemektir.
-### :milky_way: Tüm alanlar zorunludur. Kullanıcı bilgilendirilir.
-### :milky_way: Şirket kayıtları iki şekilde doğrulanır. Kayıdın gerçekleşmesi için e-posta doğrulaması gerekir. HRMS personelinin (bizim :)) onayı gerekmektedir.
-### :milky_way: Daha önce kayıtlı bir e-posta var ise kayıt gerçekleşmez. Kullanıcı bilgilendirilir.
-# :star2: ***Req 3 : Sisteme genel iş pozisyonu isimleri eklenebilmelidir. (Örneğin Software Developer, Software Architect.)***
-### :milky_way: Bu pozisyonlar tekrar edemez. Kullanıcı uyarılır.
-# :star2: ***Req 4 : İş verenler listelenebilmelidir. (Sadece tüm liste)***
-# :star2: ***Req 5 : İş arayanlar listelenebilmelidir. (Sadece tüm liste)***
-# :star2: ***Req 6 : İş pozisyonları listelenebilmelidir. (Sadece tüm liste)***
-# :star2: ***Req 7 : İş verenler sisteme iş ilanı ekleyebilmelidir.***
-###  İş ilanı formunda;
-### :milky_way: Seçilebilir listeden (dropdown) genel iş pozisyonu seçilebilmelidir.(Örneğin Java Developer)(Zorunlu)
-### :milky_way: İş tanımı girişi yapılabilmelidir. (Örneğin; firmamız için JAVA, C# vb. dillere hakim....)(Zorunlu)
-### :milky_way: Şehir bilgisi açılır listeden seçilebilmelidir. (Zorunlu)
-### :milky_way: Maaş skalası için min-max girişi yapılabilmelidir. (Opsiyonel)
-### :milky_way: Açık pozisyon adedi girişi yapılabilmelidir. (Zorunlu)
-### :milky_way: Son başvuru tarihi girişi yapılabilmelidir.
-# :star2: ***Req 8 : Sistemdeki tüm aktif iş ilanları listelenebilmelidir.***
-### :milky_way: Liste, tablo formunda gelmelidir.
-### :milky_way: Listede firmadı, genel iş pozisyonu adı, açık pozisyon adedi, yayın tarihi, son başvuru tarihi bilgileri olmalıdır.
-# :star2: ***Req 9 : Sistemdeki tüm aktif iş ilanları tarihe göre listelenebilmelidir.***
-### :milky_way: Liste, tablo formunda gelmelidir.
-### :milky_way: Listede firmadı, genel iş pozisyonu adı, açık pozisyon adedi, yayın tarihi, son başvuru tarihi bilgileri olmalıdır.
-# :star2: ***Req 10 : Sistemde bir firmaya ait tüm aktif iş ilanları listelenebilmelidir.***
-### :milky_way: Liste, tablo formunda gelmelidir.
-### :milky_way: Listede firmadı, genel iş pozisyonu adı, açık pozisyon adedi, yayın tarihi, son başvuru tarihi bilgileri olmalıdır.
-# :star2: ***Req 11 : İş verenler sistemdeki bir ilanı kapatabilmelidir. (Pasif ilan)***
-# :star2: ***Req 12: Adaylar sisteme CV girişi yapabilmelidir.***
-### :milky_way: Adaylar okudukları okulları sisteme ekleyebilmelidir. (Okul adı, bölüm)
-### :milky_way: Bu okullarda hangi yıllarda okuduklarını sisteme girebilmelidir.
-### :milky_way: Eğer mezun değilse mezuniyet yılı boş geçilebilmelidir.
-### :milky_way: Adayların okudukları okullar mezuniyet yılına göre tersten sıralanabilmelidir. Mezun olunmamışsa yine bu okul en üstte ve "devam ediyor" olarak görüntülenmelidir.
-### :milky_way: Adaylar iş tecübelerini girebilmelidir. (İş yeri adı, pozisyon)
-### :milky_way: Bu tecrübelerini hangi yıllarda yaptıklarını sisteme girebilmelidir.
-### :milky_way: Eğer hala çalışıyorsa işten ayrılma yılı boş geçilebilmelidir.
-### :milky_way: Adayların tecrübeleri yıla göre tersten sıralanabilmelidir. Hala çalışıyorsa yine bu tecrübesi en üstte ve "devam ediyor" olarak görüntülenmelidir.
-### :milky_way: Adaylar bildikleri yabancı dilleri sisteme girebilmelidir. ( Dil, Seviye -> 1-5)
-### :milky_way: Adaylar sisteme fotoğraf girebilmelidir. Adaya ait fotoğraf [cloudinary](https://cloudinary.com/pricing) sisteminde tutulacaktır.
-### :milky_way: Adaylar sisteme github adreslerini girebilmelidir.
-### :milky_way: Adaylar sisteme linkedin adreslerini girebilmelidir.
-### :milky_way: Adaylar bildikleri programlama dillerini veya teknolojilerini sisteme girebilmelidir. (Programlama/Teknoloji adı) Örneğin; React
-### :milky_way: Adaylar sisteme ön yazı ekleyebilmelidir. (Örneğin: Çalışmayı çok severim....)
-# :star2: ***Req 13 : Bir adaya ait tüm CV bilgisi görüntülenebilmelidir.***
-## **Veri tabanı olarak PostgreSQL kullanılmıştır. Projenin güncel veri tabanı modeli şöyledir:**
+# BACKEND REQUIREMENTS
+## Our system has three basic types of users. System staff, Job Seekers and Employers.
+# :star2: ***Req 1 : Job Seekers should be able to register in the system.***
+## Accept Conditions:
+### :milky_way: During registration, the user is asked for name, surname, tc no, year of birth, e-mail, password, password repeat information.
+### :milky_way: All fields are required. The user is informed.
+### :milky_way: Registration to the system is performed by verifying Mernis.
+### :milky_way: The user is notified if the validation is not valid.
+### :milky_way: If there is a previously registered e-mail or tcno, the registration will not take place. The user is informed.
+### :milky_way: Email verification is required for registration to occur.
+# :star2: ***Req 2 : Employers should be able to register in the system.***
+## Accept conditions:
+### :milky_way: During registration, the user is asked for company name, website, e-mail with the same domain as the website, phone, password, password repeat information. The purpose here is to prevent non-companies from joining the system.
+### :milky_way: All fields are required. The user is informed.
+### :milky_way: Company records are verified in two ways. Email verification is required for registration to occur. Approval from HRMS staff (our :)) is required.
+### :milky_way: If there is a previously registered e-mail, the registration will not occur. The user is informed.
+# :star2: ***Req 3 : General job position names should be added to the system. (For example Software Developer, Software Architect.)***
+### :milky_way: These positions cannot be repeated. The user is warned.
+# :star2: ***Req 4 : Employers should be able to be listed. (Whole list only)***
+# :star2: ***Req 5 : Job seekers should be listed. (Whole list only)***
+# :star2: ***Req 6 : Job positions must be listed. (Whole list only)***
+# :star2: ***Req 7 : Employers should be able to add job postings to the system.***
+### In the job posting form;
+### :milky_way: General job position can be selected from dropdown list. (For example Java Developer)(Required)
+### :milky_way: Job description entry must be possible. (For example; For our company, he is proficient in languages ​​such as JAVA, C # etc....)(Required)
+### :milky_way: City information should be able to be selected from the drop-down list. (Compulsory)
+### :milky_way: It should be possible to enter min-max for the salary scale. (Optional)
+### :milky_way: The number of open positions must be entered. (Compulsory)
+### :milky_way: It should be possible to enter the application deadline.
+# :star2: ***Req 8 : All active job postings in the system should be listed.***
+### :milky_way: The list must come in tabular form.
+### :milky_way: Company name, general job position name, number of open positions, publication date, deadline should be in the list.
+# :star2: ***Req 9 : All active job postings in the system should be listed by date.***
+### :milky_way: The list must come in tabular form.
+### :milky_way: Company name, general job position name, number of open positions, publication date, deadline should be in the list.
+# :star2: ***Req 10 : All active job postings of a company should be listed in the system.***
+### :milky_way: The list must come in tabular form.
+### :milky_way: Company name, general job position name, number of open positions, publication date, deadline should be in the list.
+# :star2: ***Req 11 : Employers should be able to close a posting in the system. (Passive posting)***
+# :star2: ***Req 12: Candidates should be able to enter their CV into the system.***
+### :milky_way: Candidates should be able to add their schools to the system. (School name, department)
+### :milky_way: These schools should be able to enter the years they studied in the system.
+### :milky_way: If not graduated, graduation year should be blank.
+### :milky_way: Candidates' schools should be in reverse order according to graduation year. If not graduated, this school should be displayed at the top and as "in progress".
+### :milky_way: Candidates should be able to enter their work experience. (Business name, position)
+### :milky_way: They should be able to enter the years of their experience into the system.
+### :milky_way: If still working, leave year should be blank.
+### :milky_way: Candidates' experience should be in reverse order by year. If it is still running, this experience should still be displayed at the top and as "in progress".
+### :milky_way: Candidates should be able to enter the foreign languages they know into the system. ( Language, Level -> 1-5)
+### :milky_way: Candidates must be able to enter photos into the system. The photo of the candidate will be kept in the [cloudinary](https://cloudinary.com/pricing) system.
+### :milky_way: Candidates should be able to enter their github addresses into the system.
+### :milky_way: Candidates should be able to enter their linkedin addresses into the system.
+### :milky_way: Candidates should be able to enter the programming languages or technologies they know into the system. (Programming/Technology name) For example; React
+### :milky_way: Candidates must be able to add a cover letter to the system. (For example: I like working very much....)
+# :star2: ***Req 13 : All CV information of a candidate should be displayed.***
+## **PostgreSQL was used as the database. The current database model of the project is as follows:**
 ![Untitled (2)](https://user-images.githubusercontent.com/73468385/122258454-b8e25d80-ced9-11eb-85f8-5c7d0f85d9b2.png)
 
 
